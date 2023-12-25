@@ -20,6 +20,9 @@ class FormButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
+          textStyle: TextStyle(
+            color: Colors.black,
+          ),
         ),
         onPressed: handler,
         child: Text(title),
