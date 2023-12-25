@@ -1,9 +1,11 @@
 import 'package:driver/models/user_model.dart' as user;
 import 'package:driver/providers/user_provider.dart';
 import 'package:driver/screens/cash_earned_screen.dart';
+import 'package:driver/screens/choice_screen.dart';
 import 'package:driver/screens/completed_trip_screen.dart';
 import 'package:driver/screens/login_signup_screen.dart';
 import 'package:driver/screens/map_screen.dart';
+import 'package:driver/screens/profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -53,10 +55,18 @@ class CustomSideDrawer extends StatelessWidget {
           const SizedBox(height: 10),
           _buildButtonTile(
             context: context,
-            title: 'Home',
-            icon: Icons.home,
+            title: 'Driver',
+            icon: Icons.car_crash,
             onTap: () => Navigator.of(context).pushNamed(
               MapScreen.route,
+            ),
+          ),
+          _buildButtonTile(
+            context: context,
+            title: 'Services',
+            icon: Icons.add_shopping_cart,
+            onTap: () => Navigator.of(context).pushNamed(
+              ChoiceScreen.route,
             ),
           ),
           _buildButtonTile(
@@ -74,6 +84,12 @@ class CustomSideDrawer extends StatelessWidget {
             onTap: () => Navigator.of(context).pushNamed(
               CashEarnedScreen.route,
             ),
+          ),
+          _buildButtonTile(
+            context: context,
+            title: 'Profile',
+            icon: Icons.account_box_rounded,
+            onTap: () => Navigator.of(context).pushNamed(Profile.route),
           ),
           _buildButtonTile(
             context: context,

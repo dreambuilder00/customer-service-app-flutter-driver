@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 ThemeData get theme {
   return ThemeData(
-    primarySwatch: Colors.blueGrey,
+    primarySwatch: Colors.deepPurple,
     colorScheme: ThemeData().colorScheme.copyWith(
-          secondary: Colors.blueGrey,
+          secondary: Colors.deepPurple,
         ),
     scaffoldBackgroundColor: Colors.white,
     textTheme: ThemeData().textTheme.copyWith(
@@ -24,7 +24,7 @@ ThemeData get theme {
         ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.deepPurple,
         elevation: 0,
         enableFeedback: true,
         shadowColor: Colors.transparent,

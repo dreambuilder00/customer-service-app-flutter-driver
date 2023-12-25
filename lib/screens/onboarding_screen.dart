@@ -1,3 +1,4 @@
+import 'package:driver/screens/choice_screen.dart';
 import 'package:driver/screens/login_signup_screen.dart';
 import 'package:driver/screens/map_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -12,6 +13,6 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     User? user = FirebaseAuth.instance.currentUser;
 
-    return user != null ? const MapScreen() : const LoginSignupScreen();
+    return user != null ? const ChoiceScreen() : const LoginSignupScreen();
   }
 }

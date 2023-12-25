@@ -1,5 +1,6 @@
 import 'package:driver/models/auth_mode.dart';
 import 'package:driver/providers/user_provider.dart';
+import 'package:driver/screens/choice_screen.dart';
 import 'package:driver/screens/map_screen.dart';
 import 'package:driver/services/auth_services.dart';
 import 'package:driver/widgets/login_signup_screen_widgets/form_button.dart';
@@ -62,7 +63,7 @@ class _LoginFormState extends State<LoginForm>
     if (!mounted) return;
     if (isAuthenticated) {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (BuildContext context) => const MapScreen(),
+        builder: (BuildContext context) => const ChoiceScreen(),
       ));
     }
   }
